@@ -1,6 +1,6 @@
 title:              Marcelo Laprea
 email:              marcelojosel15@gmail.com
-description:        Software Engineering Blog
+description:        iOS Software Engineer
 author:             Marcelo Laprea
 baseurl:            "/"
 url:                "https://lapreamarcelo.github.io"
@@ -8,7 +8,7 @@ url:                "https://lapreamarcelo.github.io"
 # Social Profiles
 twitter_username:   marcelolaprea
 github_username:    lapreamarcelo
-linkedin_username:  marcelolaprea
+linkedin_username:  marcelo-laprea-10215388
 
 # Add your google-analytics ID here to activate google analytics
 #google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
