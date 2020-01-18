@@ -2,7 +2,7 @@
 layout: page
 title: About
 permalink: /about/
-feature-img: "assets/img/caracas.jpg"
+feature-img: "assets/img/meta_texture.jpg"
 ---
 
 I am Marcelo Laprea, a System Engineer from Caracas, Venezuela. Since 2016 I have been working as an iOS developer.
