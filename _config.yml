@@ -10,7 +10,7 @@ favicon: https://lapreamarcelo.github.io/assets/favicon.ico                     
 
 # Header and footer text
 header_text: Marcelo Laprea  # Change Blog header text
-header_feature_image: https://lapreamarcelo.github.io/assets/img/pexels/computer2.webp
+header_feature_image: assets/img/pexels/computer2.webp
 footer_text: Marcelo Laprea
 
 # Blog
