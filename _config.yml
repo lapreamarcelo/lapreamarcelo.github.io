@@ -11,7 +11,8 @@ favicon: https://lapreamarcelo.github.io/assets/favicon.ico                     
 # Header and footer text
 header_text: Marcelo Laprea  # Change Blog header text
 header_feature_image: assets/img/pexels/computer.jpeg
-footer_text: Marcelo Laprea
+footer_text: Created by <a href="https://avilatek.co/">Avila Tek</a>
+
 
 # Blog
 excerpt: true                                           # Or "truncate" (first 250 characters), "false" to disable
