@@ -1,143 +1,486 @@
-# [Start Bootstrap - Clean Blog Jekyll](https://startbootstrap.com/template-overviews/clean-blog-jekyll/) - Official Jekyll Version
+# Type on Strap 
 
-[Clean Blog Jekyll](http://startbootstrap.com/template-overviews/clean-blog-jekyll/) is a stylish, responsive blog theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features a blog homepage, about page, contact page, and an example post page along with a working contact form powered by [Formspree](https://formspree.io/).
+[![Build Status](https://travis-ci.org/sylhare/Type-on-Strap.svg?branch=master)](https://travis-ci.org/sylhare/Type-on-Strap)
+[![Gem Version](https://badge.fury.io/rb/type-on-strap.svg)](https://badge.fury.io/rb/type-on-strap)
+[![Docker Pulls](https://img.shields.io/docker/pulls/sylhare/type-on-strap)](https://hub.docker.com/repository/docker/sylhare/type-on-strap)
 
-This repository holds the official Jekyll version of the Clean Blog theme on Start Bootstrap!
+A free and open-source [Jekyll](https://jekyllrb.com) theme. Based on Rohan Chandra [type-theme](https://github.com/rohanchandra/type-theme) with a few new features:
 
-## Preview
+* Responsive design
+* Portfolio page for your projects
+* Tags compatibility
+* Bootstrap : [Get Bootstrap](http://getbootstrap.com/)
+* Search feature : [Simple-Jekyll-Search](https://github.com/christian-fei/Simple-Jekyll-Search)
+* Math Rendering : [KateX](https://github.com/Khan/KaTeX)
+* Nice fonts : [Font Awesome](https://fontawesome.com/), [Source Sans Pro](https://fonts.google.com/specimen/Source+Sans+Pro), [Pacifico](https://fonts.google.com/specimen/Pacifico?selection.family=Pacifico) 
+* Seo Tags : [Jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag)
+* Syntax Highlighting: Easily customisable [Base16](https://github.com/chriskempson/base16)
+* Free of rights images from [pexels](https://www.pexels.com/)
 
-[![Clean Blog (Jekyll) Preview](https://startbootstrap.com/assets/img/screenshots/themes/clean-blog-jekyll.png)](http://blackrockdigital.github.io/startbootstrap-clean-blog-jekyll/)
+> [Demo Site](https://sylhare.github.io/Type-on-Strap/)
+ 
+[![Default Type on Strap blog](https://github.com/Sylhare/Type-on-Strap/blob/master/screenshot.png?raw=true)](https://sylhare.github.io/Type-on-Strap/)
 
-**[View Live Preview](http://blackrockdigital.github.io/startbootstrap-clean-blog-jekyll/)**
+## Table of Contents
 
-## Installation & Setup
+1. [Usage](https://github.com/Sylhare/Type-on-Strap#Usage)
+2. [Structure](https://github.com/Sylhare/Type-on-Strap#structure)
+3. [Configure Type on Strap](https://github.com/Sylhare/Type-on-Strap#configure-type-on-strap)
+4. [Other Layouts](https://github.com/Sylhare/Type-on-Strap#other-layouts)
+5. [Feature pages](https://github.com/Sylhare/Type-on-Strap#feature-pages)
+6. [Advanced](https://github.com/Sylhare/Type-on-Strap#advanced)
+7. [License](https://github.com/Sylhare/Type-on-Strap#license)
 
-### Using RubyGems:
+## Usage
 
-When installing the theme using RubyGems, demo images, posts, and pages are not included. Follow the instructions below for complete setup.
+### As a ruby gem
 
-1. (Optional) Create a new Jekyll site: `jekyll new my-site`
-2. Replace the current theme in your `Gemfile` with `gem "jekyll-theme-clean-blog"`.
-3. Install the theme: `bundle install`
-4. Replace the current theme in your `_config.yml` file with `theme: jekyll-theme-clean-blog`.
-5. Build your site: `bundle exec jekyll serve`
+Check out this tutorial: [Use as Ruby Gem](https://github.com/Sylhare/Type-on-Strap#use-as-ruby-gem)
 
-Assuming there are no errors and the site is building properly, follow these steps next:
+### As a github page
 
-1. Create the following pages if they do not exist already (or change the extension of exisitig markdown files from `.md` to `.html`):
-   - `index.html` - set to `layout: home`
-   - `about.html` - set to `layout: page`
-   - `contact.html` - set to `layout: page`
-   - `posts/index.html` - set to `layout: page` (you will also need to create a `posts` directory)
-2. Configure the `index.html` front matter. Example:
+1. Fork and clone the [Type on Strap repo](https://github.com/sylhare/Type-On-Strap): `git clone https://github.com/Sylhare/Type-on-Strap.git`
+2. Install [Jekyll](https://jekyllrb.com/docs/installation/): `gem install jekyll`, check [#1](https://github.com/Sylhare/Type-on-Strap/issues/1) if you have a problem.
+3. Install the theme's dependencies: `bundle install`
+4. Customize the theme
+	- Github Page: [update `_config.yml`](https://github.com/Sylhare/Type-on-Strap#site-configuration)
+5. Run the Jekyll server: `bundle exec jekyll serve`
+
+## Structure
+
+Here are the main files of the template
+
+```bash
+jekyll-theme-basically-basic
+├── _includes	               # theme includes
+├── _layouts                   # theme layouts (see below for details)
+├── _portfolio	               # collection of article to be populated in the portfolio page
+├── _posts                     # Blog posts
+├── _sass                      # Sass partials 
+├── assets
+|  ├── js	               # theme javascript, Katex, jquery, bootstrap, jekyll search, 
+|  ├── css                     # isolated Bootstrap, font-awesome, katex and main css
+|  ├── fonts		       # Font-Awesome, and other fonts
+|  └── img		       # Images used for the template
+├── pages
+|   ├── 404.md		       # To be displayed when url is wrong
+|   ├── about.md               # About example page
+|   ├── gallery.md             # Gallery page for your photos
+|   ├── portfolio.md	       # Portfolio page for your projects
+|   ├── search.html	       # Search page
+|   └── tags.md                # The tag page
+├── _config.yml                # sample configuration
+└── index.html                 # sample home page (blog page paginated)
 ```
----
-layout: home
-background: '/PATH_TO_IMAGE'
----
+	
+## Configure Type on Strap
+
+Open `_config.yml` in a text editor to change most of the blog's settings.
+
+If a variable in this document is marked as "optional", disable the feature by removing all text from the variable. 
+
+
+### Site configuration
+Configure Jekyll as your own blog or with a subpath in in `_config.yml`:
+
+Jekyll website *without* a subpath (such as a GitHub Pages website for a given username):
+
+```yml
+baseurl: ""
+url: "https://username.github.io"
 ```
-3. Configure the `about.html`, `contact.html`, and `posts/index.html` front matter. Example:
+
+Jekyll website *with* subpath (like the Type on Strap [demo](https://sylhare.github.io/Type-on-Strap/) page):
+
+```yml
+baseurl: "/sub-directory"
+url: "https://username.github.io/"
 ```
----
-layout: page
-title: Page Title
-description: This is the page description.
-background: '/PATH_TO_IMAGE'
----
+
+Please configure this  before using the theme.
+
+### Meta and Branding
+
+Meta variables hold basic information about your Jekyll site which will be used throughout the site 
+and as meta properties for search engines, browsers, and the site's RSS feed.
+
+Change these variables in `_config.yml`:
+
+```yml
+title: My Jekyll Blog                 # Name of website
+avatar: assets/img/triangle.png       # Path of avatar image, to be displayed in the theme's header
+description: My blog posts            # Short description, primarily used by search engines
+favicon: assets/favicon.ico           # Icon displayed in the tab
 ```
-4. For each post in the `_posts` directory, update the front matter. Example:
+
+### Main configuration
+
+#### Footer and Header's text
+
+Customize your site header/footer with these variables in `_config.yml`:
+
+```yml
+header_text: Welcome to my Jekyll blog
+header_feature_image: assets/img/sample3.png
+footer_text: Copyright 2017
 ```
+
+If you don't want anything, replace the value by `" "`.
+
+#### Localisation string
+
+Localization string is a way to quickly change the template language for text like *Next Post* or *Follow on*, ...
+You can find all the properties in `_data/language.yml`.
+
+By default it is in english, but you can easily add your own language.
+
+### Google Analytics
+
+To enable Google Analytics, add your [tracking ID](https://support.google.com/analytics/answer/1032385) 
+to `_config.yml` like so:
+
+```yml
+google_analytics: UA-NNNNNNNN-N
+```
+
+### Comments (via Disqus)
+
+Optionally, if you have a [Disqus](https://disqus.com/) account, you can show a 
+comments section below each post.
+
+To enable Disqus comments, add your [Disqus shortname](https://help.disqus.com/customer/portal/articles/466208) 
+to your project's `_config.yml` file:
+
+```yml
+disqus_shortname: my_disqus_shortname
+```
+
+### Math typesetting
+
+When KateX is set in `_config.yml`:
+
+```yml
+katex: true # to Enable it
+```
+
+You can then wrap math expressions with `$$` signs in your posts and make sure you have set the `katex` variable 
+in `_config.yml` to `true` for math typesetting.
+
+For inline math typesetting, type your math expression on the *same line* as your content. For example:
+
+```latex
+Type math within a sentence $$2x^2 + x + c$$ to display inline
+```
+
+For display math typesetting, type your math expression on a *new line*. For example:
+
+```latex
+$$
+  \bar{y} = {1 \over n} \sum_{i = 1}^{n}y_i
+$$
+```
+
+### Social icons
+
+In `_data/social.yml` you can customize the social icons from other wbesite you wish to display in the blog.
+The site icons come from [Font Awesome](https://fontawesome.com/).
+
+#### Share in article
+
+The share icons are the one at the bottom of the blog page if enabled, 
+to share the article on those platform.
+
+
+#### Footer
+
+Display  in the footer. 
+All icon variables should be your username enclosed in quotes (e.g. "username") in `_config.yml`, 
+except for the following variables:
+
+```yml
+rss: true                                                   # Make sure you created a feed.xml with feed.xml layout
+email_address: type@example.com
+linkedin: https://www.linkedin.com/in/FirstLast
+stack_exchange: https://stackexchangecom/users/0000/first-last
+stack_overflow: https://stackoverflow.com/users/0000/first-last
+youtube: UCqECaJ8Gagnn7YCbPEzWH6g  # Youtube token of your channel in the url 
+```
+
+### Customizing Posts
+
+When writing a post, be sure in jekyll to:
+ - Put it in the `_posts` folder
+ - Name it with the date first like `2019-08-21-This-is-my-blog-post.md`
+
+#### Layout: Post
+
+This are the basic features you can use with the  `post` layout.
+
+```yml
 ---
 layout: post
-title: "Post Title"
-subtitle: "This is the post subtitle."
-date: YYYY-MM-DD HH:MM:SS
-background: '/PATH_TO_IMAGE'
+title: Hello World                                # Title of the page
+hide_title: true                                  # Hide the title when displaying the post, but shown in lists of posts
+feature-img: "assets/img/sample.png"              # Add a feature-image to the post
+thumbnail: "assets/img/thumbnail/sample-th.png"   # Add a thumbnail image on blog view
+color: rgb(80,140,22)                             # Add the specified color as feature image, and change link colors in post
+bootstrap: true                                   # Add bootstrap to the page
+tags: [sample, markdown, html]
 ---
 ```
 
-For reference, look at the [demo repository](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll) to see how the files are set up.
+With `thumbnail`, you can add a smaller image than the `feature-img`. 
+If you don't have a thumbnail you can still use the same image as the feature one.
 
-5. Add the form to the `contact.html` page. Add the following code to your `contact.html` page:
-```
-<form name="sentMessage" id="contactForm" novalidate>
-  <div class="control-group">
-    <div class="form-group floating-label-form-group controls">
-      <label>Name</label>
-      <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
-      <p class="help-block text-danger"></p>
-    </div>
-  </div>
-  <div class="control-group">
-    <div class="form-group floating-label-form-group controls">
-      <label>Email Address</label>
-      <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
-      <p class="help-block text-danger"></p>
-    </div>
-  </div>
-  <div class="control-group">
-    <div class="form-group col-xs-12 floating-label-form-group controls">
-      <label>Phone Number</label>
-      <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
-      <p class="help-block text-danger"></p>
-    </div>
-  </div>
-  <div class="control-group">
-    <div class="form-group floating-label-form-group controls">
-      <label>Message</label>
-      <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
-      <p class="help-block text-danger"></p>
-    </div>
-  </div>
-  <br>
-  <div id="success"></div>
-  <div class="form-group">
-    <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
-  </div>
-</form>
+The background used when `color` is set comes from `lineart.png` from [xukimseven](https://github.com/xukimseven) 
+you can edit it in the config file (`_config.yml > color_image`). If you want another one, put it in `/assets/img` as well. 
+
+The **bootstrap** is not mandatory and is only useful if you want to add bootstrapped content in your page. 
+It will respect the page and theme layout, mind the padding on the sides.
+
+#### Post excerpt
+
+The [excerpt](https://jekyllrb.com/docs/posts/#post-excerpts) are the first lines of an article that is display on the blog page. 
+The length of the excerpt has a default of around `250` characters or can be manually set in the post using:
+
+in `conflig.yml`:
+
+```yml
+excerpt: true
 ```
 
-Make sure you have the `email` setting in your `_config.yml` file set to a working email address! Once this is set, fill out the form and then check your email, verify the email address using the link sent to you by Formspree, and then the form will be working!
+Then in your post, add the `excerpt separator`:
 
-6. Build your site: `bundle exec jekyll serve`
+```yml
+---
+layout: post
+title: Sample Page
+excerpt_separator: <!--more-->
+---
 
-### Using Core Files
+some text in the excerpt
+<!--more-->
+... rest of the text not shown in the excerpt ...
+```
 
-When using the core files, the demo images, posts, and pages are all included with the download. After following the instructions below, you can then go and change the content of the pages and posts.
+The html is stripped out of the excerpt so it only display text.
 
-1. [Download](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll/archive/master.zip) or Clone the repository.
-2. Update the following configuration settings in your `_config.yml` file:
-   - `baseurl`
-   - `url`
-   - `title`
-   - `email` (after setting this setting to a working email address, fill out the form on the contact page and send it - then check your email and verify the address and the form will send you messages when used)
-   - `description`
-   - `author`
-   - `twitter_username` (Optional)
-   - `facebook_username` (Optional)
-   - `github_username` (Optional)
-   - `linkedin_username` (Optional)
-3. Build your site: `bundle exec jekyll serve`
+## Other Layouts
+Please refer to the [Jekyll docs for writing posts](https://jekyllrb.com/docs/posts/). 
+Non-standard features are documented below.
 
-## Bugs and Issues
+### Layout: Page
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll/issues) here on GitHub!
+The page layout have a bit more features explained here.
 
-## About
+```yml
+---
+layout: page
+title: "About" 
+subtitle: "This is a subtitle"   
+feature-img: "assets/img/sample.png" 
+permalink: /about.html               # Set a permalink your your page
+hide: true                           # Prevent the page title to appear in the navbar
+icon: "fa-search"                    # Will Display only the fontawesome icon (here: fa-search) and not the title
+tags: [sample, markdown, html]
+---
+```
 
-Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
+The hide only hides your page from the navigation bar, it is however still generated and can be access through its link. 
 
-* https://startbootstrap.com
-* https://twitter.com/SBootstrap
+### Layout: Default
 
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
+This layout includes the head, navigation bar and footer around your content.
 
-* http://davidmiller.io
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
+## Feature pages
 
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+All feature pages besides the "home" one are stored in the `page` folder, 
+they will appear in the navigation bar unless you set `Hide: true` in the front matter. 
 
-## Copyright and License
+Here are the documentation for the other feature pages that can be added through `_config.yml`.
 
-Copyright 2013-2019 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll/blob/gh-pages/LICENSE) license.
+### Home
+
+This page is used as the home page of the template (in the `index.html`). It displays the list of articles in `_posts`.
+You can use this layout in another page (adding a title to it will make it appear in the navigation bar).
+
+The recommended width and height for the home picture is width:`2484px;` and height:`1280px` 
+which are the dimensions of the actual picture for it to be rolling down as you scroll the page.
+
+If your posts are not displaying ensure that you have added the line `paginate: 5` to `_config.yml`.
+
+### Portfolio
+
+Portfolio is a feature page that will take all the markdown/html files in the `_portfolio` folder to create a 3-columns image portfolio matrix.
+
+To use the portfolio, simply create a `portfolio.md` with this information inside:
+```yml
+--- 
+layout: page
+title : Portfolio 
+---
+
+{% include portfolio.html %}
+```
+
+#### Portofolio posts
+
+You can format the portfolio posts in the `_portfolio` folder using the `post layout`. Here are little explaination on some of the possible feature you can use and what they will do.
+
+If you decide to use a date, please be sure to use one that can be parsed such as `yyyy-mm-dd`. You can see more format example on the demo posts that are available for the theme:
+
+```yml
+---
+layout: post
+title: Circus				       # Title of the portfolio post
+feature-img: "assets/img/portfolio/cake.png"   # Will display the image in the post
+img: "assets/img/portfolio/cake.png"           # Will display the image in the portfolio page
+date: 2019-07-25		 	       # Not mandatory, however needs to be in date format to display the date
+---
+```
+
+#### Portfolio in gem
+
+Make sure your `_config.yml` contains the following if you are using the theme as a gem:
+
+```yml
+
+# PORTFOLIO
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:name
+```    
+
+This creates the collection for Jekyll so it can find and display your portfolio posts.
+
+### Gallery
+
+You can create a gallery using [Masonry JS](https://masonry.desandro.com/) which will placing the pictures in optimal position 
+based on available vertical space. 
+You need to specify the `gallery_path` which will be used to find the pictures to render. 
+It will take all of the picture under that directory. Then use the `include` to add it in your page. 
+
+```yml
+---
+layout: page
+title: Gallery
+gallery: "assets/img/pexels"
+---
+
+{% include gallery.html gallery_path=page.gallery %}
+```
+
+
+### Search
+
+The search feature is based on [Simple-Jekyll-search](https://github.com/christian-fei/Simple-Jekyll-Search) 
+there is a `search.json` file that will create a list of all of the site posts, pages and portfolios. 
+
+Then there's a `search.js` displaying the formatted results entered in the `search.html` page.
+
+The search page can be hidden with the `hide` option. You can remove the icon by removing `icon`:
+
+```yml
+---
+layout: search
+title: Search
+icon: "search"
+---
+```
+
+### Tags
+
+Tags should be placed between `[]` in your post metadata. Separate each tag with a comma. 
+Tags are recommended for posts and portfolio items.
+
+For example:
+
+```yml
+---
+layout: post
+title: Markdown and HTML
+tags: [sample, markdown, html]
+---
+```
+
+> Tags are case sensitive `Tag_nAme` ≠ `tag_name`
+
+All the tags will be listed in `tags.html` with a link toward the pages or posts.
+The Tag page can be hidden with the `hide` option. You can remove the icon by removing `icon` (like for the search page).
+
+## Advanced
+
+### Liquid tags
+
+Jekyll works with [liquid](https://shopify.github.io/liquid/) tags usually represented by:
+
+```
+{{ liquid.tag | filter }}
+```
+
+These are useful to render your jekyll files. 
+You can learn more about them on [shopify's doc](https://help.shopify.com/themes/liquid/basics)
+
+### Minimizing and optimizing: css, js and images
+
+Before you need to have `node` and `npm` installed:
+- Windows: https://nodejs.org/
+- Ubuntu/Debian: `apt-get install nodejs npm libgl1 libxi6`
+- Fedora (dnf) / RHEL/CentOS (yum): `dnf install node npm libglvnd-glx libXi`
+
+Then you need to install [`gulp-cli`](https://gulpjs.com/) and its dependencies:
+```shell
+cd assets/
+sudo npm install gulp-cli -g
+npm install
+```
+
+**Now, whenever you want to minify and optimize, run:**
+```shell
+cd assets/
+gulp default
+# tip: run a git status to see the changes
+git status
+```
+
+### Use as Ruby Gem
+
+You can use Type-on-strap as a [gem](https://rubygems.org/gems/type-on-strap). 
+
+Ruby Gem Method
+Add this line to your Jekyll site's Gemfile (or create one):
+
+```ruby
+gem "type-on-strap"
+```
+Add this line to your Jekyll site's `_config.yml` file:
+
+```yml
+theme: type-on-strap
+```
+
+Then run Bundler to install the theme gem and dependencies:
+
+```bash
+bundle install
+```
+
+Then you can start adding content like:
+  - Add a `index.html` file
+  - Add the feature page you want. (ex: as it is already in `pages`)
+  - Add posts in `_posts` and `_portfolio` to be displayed
+
+### Remote Theme
+
+Now you can use any theme gem with github pages with [29/11/2017 Github Pages Broadcast](https://github.com/blog/2464-use-any-theme-with-github-pages).
+For that remove all `theme:` attributes from `_config.yml` and add instead:
+
+```yml
+remote_theme: sylhare/Type-on-Strap 
+```
+
+## License
+
+There are some fonts and component on this theme going under the MIT licence as well in this theme.
+[The MIT License (MIT)](https://raw.githubusercontent.com/Sylhare/Type-on-Strap/master/LICENSE)
