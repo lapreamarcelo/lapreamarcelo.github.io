@@ -9,10 +9,9 @@ avatar: https://lapreamarcelo.github.io/assets/img/triangle.png                 
 favicon: https://lapreamarcelo.github.io/assets/favicon.ico                                     # Icon displayed in the tab
 
 # Header and footer text
-header_text: Change <code>header_text</code> in <code>_config.yml</code>  # Change Blog header text
-header_feature_image: assets/img/pexels/triangular.jpeg
-footer_text: >
-  Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
+header_text: Marcelo Laprea  # Change Blog header text
+header_feature_image: https://lapreamarcelo.github.io/assets/img/pexels/computer2.webp
+footer_text: Marcelo Laprea
 
 # Blog
 excerpt: true                                           # Or "truncate" (first 250 characters), "false" to disable
