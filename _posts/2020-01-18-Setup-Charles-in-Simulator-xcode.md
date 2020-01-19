@@ -15,13 +15,12 @@ Now, for what we can use **Charles**?. Basically to debug network requests in ou
 1. **Install <a href="https://www.charlesproxy.com/download/" target="_blank">Charles</a> by clicking in the link.**
 
 2. **Open Charles and click in the Menu: Help > SSL Proxying, and select *Install Charles Root Certificate in iOS Simulators***.
-
 <img src="/assets/img/posts/2020-01-18-Setup-Charles-in-Simulator-xcode/p1.png" alt="Charles">
 
 3. **Now make sure you have the option macOS Proxy selected, so we can listen traffic, so click in the Menu: Proxy > macOS Proxy**
-
 <img src="/assets/img/posts/2020-01-18-Setup-Charles-in-Simulator-xcode/p2.png" alt="Charles">
 
-4. **Restart yout simulator and make sure you are recording the incoming traffic. You should see in the right bottom a *Recording* label. If not, just click in *Start Recording* buttom**
-
+4. **Restart your simulator and make sure you are recording the incoming traffic. You should see in the right bottom a *Recording* label. If not, just click in *Start Recording* buttom**
 <img src="/assets/img/posts/2020-01-18-Setup-Charles-in-Simulator-xcode/p3.png" alt="Charles">
+
+5. **Run the app in the simulator, and at this moment, you should see the incoming traffic at the left**
