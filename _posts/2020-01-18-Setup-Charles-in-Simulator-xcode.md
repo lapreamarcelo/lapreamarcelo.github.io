@@ -48,3 +48,25 @@ Now, for what we can use **Charles**?. Basically to debug network requests in ou
 * **If you click the response, and the *Contents* you can see the JSON that we are getting. Now we can check why we are getting an error in the app if that is the case.**
 
 <img src="/assets/img/posts/2020-01-18-Setup-Charles-in-Simulator-xcode/p7.png" alt="Charles">
+
+* **Let's map some responses so we can mock them. Right click in the response, and click *Save Response...***
+
+<img src="/assets/img/posts/2020-01-18-Setup-Charles-in-Simulator-xcode/p8.png" alt="Charles">
+
+* **Now right click in the request and click *Viewer Mappings...* and copy what the Host, Port and Path are, because we are gonna use it next.**
+
+<img src="/assets/img/posts/2020-01-18-Setup-Charles-in-Simulator-xcode/p9.png" alt="Charles">
+
+<img src="/assets/img/posts/2020-01-18-Setup-Charles-in-Simulator-xcode/p10.png" alt="Charles">
+
+* **Now in the Menu click: Tools > Map Local... and add a new one. For Local path: you will select the response that you saved and for Host, Port and Path you will fill it with the information that you got in the previous step.**
+
+<img src="/assets/img/posts/2020-01-18-Setup-Charles-in-Simulator-xcode/p11.png" alt="Charles">
+
+<img src="/assets/img/posts/2020-01-18-Setup-Charles-in-Simulator-xcode/p12.png" alt="Charles">
+
+<img src="/assets/img/posts/2020-01-18-Setup-Charles-in-Simulator-xcode/p13.png" alt="Charles">
+
+* **Now you can edit the JSON and start testing your network responses**
+
+### That's how you setup Charles for iOS Simulator. For any questions you can contact me at my Twitter, Linkedin or Email (marcelojosel15@gmail.com). If I made any mistakes in the post, do not hesitate to write me so I can fix it. Thanks again 
