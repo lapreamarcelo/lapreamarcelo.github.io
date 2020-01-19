@@ -30,6 +30,7 @@ Now, for what we can use **Charles**?. Basically to debug network requests in ou
 
 * **Now, you have to make sure to enable SSL Proxying for the URLs that you want to test. There are two ways of doing this:**
 
+<p>&nbsp;</p>
 
    1) The first way is by clicking in the Menu: Proxy > SSL Proxying Settings and then add the URL that you want. Use * to indicate a range of URLs. 
 
