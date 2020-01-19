@@ -31,7 +31,7 @@ Now, for what we can use **Charles**?. Basically to debug network requests in ou
 * **Now, you have to make sure to enable SSL Proxying for the URLs that you want to test. There are two ways of doing this:**
 
 
-   * The first way is by clicking in the Menu: Proxy > SSL Proxying Settings and then add the URL that you want. Use * to indicate a range of URLs. 
+   * The first way is by clicking in the Menu: Proxy > SSL Proxying Settings and then add the URL that you want.
 
    <img src="/assets/img/posts/2020-01-18-Setup-Charles-in-Simulator-xcode/p4.png" alt="Charles">
 
