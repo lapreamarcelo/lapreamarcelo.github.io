@@ -29,9 +29,7 @@ Now, for what we can use **Charles**?. Basically to debug network requests in ou
 * **Run the app in the simulator, and at this moment, you should see the incoming traffic at the left**
 
 * **Now, you have to make sure to enable SSL Proxying for the URLs that you want to test. There are two ways of doing this:**
-
 <p>&nbsp;</p>
-
    1) The first way is by clicking in the Menu: Proxy > SSL Proxying Settings and then add the URL that you want. Use * to indicate a range of URLs. 
 
    <img src="/assets/img/posts/2020-01-18-Setup-Charles-in-Simulator-xcode/p4.png" alt="Charles">
@@ -44,5 +42,8 @@ Now, for what we can use **Charles**?. Basically to debug network requests in ou
 
     <img src="/assets/img/posts/2020-01-18-Setup-Charles-in-Simulator-xcode/p6.png" alt="Charles">
 
+* **Now restart the simulator, and you will see the responses**
 
-* **Now restart the simulator, and you can see the responses**
+* **If you click the response, and the *Contents* you can see the JSON that we are getting. Now we can check why we are getting an error in the app if that is the case.**
+
+<img src="/assets/img/posts/2020-01-18-Setup-Charles-in-Simulator-xcode/p7.png" alt="Charles">
