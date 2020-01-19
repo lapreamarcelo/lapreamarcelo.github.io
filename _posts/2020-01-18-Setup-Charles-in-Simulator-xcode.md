@@ -31,7 +31,7 @@ Now, for what we can use **Charles**?. Basically to debug network requests in ou
 * **Now, you have to make sure to enable SSL Proxying for the URLs that you want to test. There are two ways of doing this:**
 
 
-   1. The first way is by clicking in the Menu: Proxy > SSL Proxying Settings and then add the URL that you want. Use * to indicate a range of URLs. 
+   * The first way is by clicking in the Menu: Proxy > SSL Proxying Settings and then add the URL that you want. Use * to indicate a range of URLs. 
 
    <img src="/assets/img/posts/2020-01-18-Setup-Charles-in-Simulator-xcode/p4.png" alt="Charles">
 
@@ -39,7 +39,7 @@ Now, for what we can use **Charles**?. Basically to debug network requests in ou
    <img src="/assets/img/posts/2020-01-18-Setup-Charles-in-Simulator-xcode/p5.png" alt="Charles">
 
 
-   2. The second way is when you see the incoming traffic in the left view of Charles, just right click the URL that you want and click *Enable SSL Proxying*
+   * The second way is when you see the incoming traffic in the left view of Charles, just right click the URL that you want and click *Enable SSL Proxying*
 
    <img src="/assets/img/posts/2020-01-18-Setup-Charles-in-Simulator-xcode/p6.png" alt="Charles">
 
@@ -53,7 +53,7 @@ Now, for what we can use **Charles**?. Basically to debug network requests in ou
 
 <img src="/assets/img/posts/2020-01-18-Setup-Charles-in-Simulator-xcode/p8.png" alt="Charles">
 
-* **Now right click in the request and click *Viewer Mappings...* and copy what the Host, Port and Path are, because we are gonna use it next.**
+* **Now right click in the request and click *Viewer Mappings...* and copy what the Host, Port and Path are, because we are going to use it next.**
 
 <img src="/assets/img/posts/2020-01-18-Setup-Charles-in-Simulator-xcode/p9.png" alt="Charles">
 
@@ -69,4 +69,6 @@ Now, for what we can use **Charles**?. Basically to debug network requests in ou
 
 * **Now you can edit the JSON and start testing your network responses**
 
-### That's how you setup Charles for iOS Simulator. For any questions you can contact me at my Twitter, Linkedin or Email (marcelojosel15@gmail.com). If I made any mistakes in the post, do not hesitate to write me so I can fix it. Thanks again 
+### That's how you setup Charles for iOS Simulator. For any questions you can contact me at my Twitter, Linkedin or Email. If I made any mistakes in the post, do not hesitate to write me so I can fix it. 
+
+## Thanks again 
