@@ -11,3 +11,23 @@ I am the cofounder of <a href="https://avilatek.co/" target="_blank">Avila Tek</
 
 I have worked in several projects, from startups to big companies. I am currently working as an iOS Software Engineer in Kindred company, house of UNIBET. 
  
+# Education
+
+## **2017 - 2018** Universidad Europea (España)
+#### Master's degree . Big Data Analytics
+---
+
+## **2012 - 2017**  Universidad Metropolitana. (Venezuela)
+#### Engineer's degree - Systems Engineering
+#### Co-founder and President of Metrohack: Student Association to represent the Univeristy in app challenges, hackathons, teach new technologies to students.
+---
+
+## **2011 - 2012** Texas A&M University (United States)
+#### Intensive English Program
+
+---
+
+
+
+
+
