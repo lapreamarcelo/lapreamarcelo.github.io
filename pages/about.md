@@ -24,6 +24,7 @@ Co-founder and President of Metrohack: Student Association to represent the Univ
 
 ## **2011 - 2012** Texas A&M University (United States)
 #### Intensive English Program
+
 ---
 
 
