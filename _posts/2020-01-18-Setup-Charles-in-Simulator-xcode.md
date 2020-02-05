@@ -50,7 +50,7 @@ Now, for what we can use **Charles**?. Basically to debug network requests in ou
 
 <img src="/assets/img/posts/2020-01-18-Setup-Charles-in-Simulator-xcode/p7.png" alt="Charles">
 
-* **Let's map some responses so we can mock them. Right click in the response, and click *Save Response...***
+* **Let's map locally some responses so we can mock them. Right click in the response, and click *Save Response...***
 
 <img src="/assets/img/posts/2020-01-18-Setup-Charles-in-Simulator-xcode/p8.png" alt="Charles">
 
