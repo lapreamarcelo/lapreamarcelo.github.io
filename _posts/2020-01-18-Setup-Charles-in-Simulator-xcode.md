@@ -2,7 +2,7 @@
 layout: post
 title: "Let's setup Charles in iOS simulator with Xcode"
 author: marcelolaprea
-feature-img: "assets/img/gray.jpg"
+feature-img: "/assets/img/posts/2020-01-18-Setup-Charles-in-Simulator-xcode/header.png"
 tags: [Swift, iOS, Xcode, Networking, Debugging, English]
 ---
 
