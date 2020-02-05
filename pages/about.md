@@ -5,11 +5,11 @@ permalink: /about/
 feature-img: "assets/img/gray.jpg"
 ---
 
-**I am Marcelo Laprea, a System Engineer from Caracas, Venezuela. Since 2016 I have been working as an iOS developer.** 
+I am Marcelo Laprea, a System Engineer from Caracas, Venezuela. Since 2016 I have been working as an iOS developer.
 
-**I am the cofounder of <a href="https://avilatek.co/" target="_blank">Avila Tek</a>. Let's build a project together.**
+I am the cofounder of <a href="https://avilatek.co/" target="_blank">Avila Tek</a>. Let's build a project together.
 
-**I have worked in several projects, from startups to big companies. I am currently working as an iOS Software Engineer in Kindred company, house of UNIBET.** 
+I have worked in several projects, from startups to big companies. I am currently working as an iOS Software Engineer in Kindred company, house of UNIBET.
  
 # Education
 
