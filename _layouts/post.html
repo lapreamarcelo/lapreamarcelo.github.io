@@ -4,8 +4,9 @@ layout: default
 {% include share_thumbnail.html page=page %}
 
 <article {% if page.feature-img or page.color %}class="feature-image"{% endif %}>
-  <header id="main" style="">
+  <header id="main" style="background-image: url('{{ page.feature-img | relative_url }}')">
     {% unless page.hide_title %}
+      <h1 id="{{ page.title | cgi_escape }}" class="title">{{ page.title }}</h1>
       <h1 id="{{ page.title | cgi_escape }}" class="title">{{ page.title }}</h1>
       {% include post_info.html author=page.author date=page.date %}
     {% endunless %}
