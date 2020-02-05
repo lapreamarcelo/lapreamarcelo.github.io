@@ -5,7 +5,7 @@ url: "https://lapreamarcelo.github.io"
 # THEME-SPECIFIC CONFIGURATION
 title: Marcelo Laprea                                                                          # site's title
 description: "Software Engineer blog, including iOS, Swift, Xcode, Machine Learning tutorials" # used by search engines
-avatar: https://lapreamarcelo.github.io/assets/img/triangle.png                                # Empty for no avatar in navbar
+avatar: #https://lapreamarcelo.github.io/assets/img/triangle.png                                # Empty for no avatar in navbar
 favicon: https://lapreamarcelo.github.io/assets/favicon.ico                                     # Icon displayed in the tab
 
 # Header and footer text
