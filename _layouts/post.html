@@ -6,6 +6,9 @@ layout: default
 <article {% if page.feature-img or page.color %}class="feature-image"{% endif %}>
   <header id="main" style="">
     {% unless page.hide_title %}
+      {% if page.header-img %} 
+      <img src="{{ page.header-img }}" alt="Smiley face">
+      {% endif %}
       <h1 id="{{ page.title | cgi_escape }}" class="title">{{ page.title }}</h1>
       {% include post_info.html author=page.author date=page.date %}
     {% endunless %}

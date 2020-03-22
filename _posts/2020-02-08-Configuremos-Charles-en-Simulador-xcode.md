@@ -3,6 +3,7 @@ layout: post
 title: "Configuremos Charles en el simulador de iOS con Xcode"
 author: marcelolaprea
 tags: [Swift, iOS, Xcode, Networking, Debugging, Spanish]
+header-img: "/assets/img/posts/2020-01-18-Setup-Charles-in-Simulator-xcode/header.png"
 ---
 
 Antes de empezar con este post, tenemos que preguntarnos que es **Charles**. 
@@ -70,6 +71,6 @@ empecemos.
 
 * **Ahora puede editar el JSON y comenzar a probar sus respuestas de red**
 
-### Así es como configuras Charles para iOS Simulator. Para cualquier consulta puede contactarme en mi Twitter, Linkedin o correo electrónico. Si cometí algún error en la publicación, no dude en escribirme para que pueda solucionarlo.
+### Así es como configuras Charles para iOS Simulator. Para cualquier consulta puede contactarme en mi Twitter, Linkedin o correo electrónico.
 
 ## Muchas gracias
