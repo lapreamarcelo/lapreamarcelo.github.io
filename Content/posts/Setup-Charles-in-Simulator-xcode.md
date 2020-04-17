@@ -5,6 +5,10 @@ description: With Charles with can debug the network requests in our apps so we 
 tags: Swift, Debugging, English
 ---
 
+<p align="center">
+    <img src="/images/charles-tutorial/header.png" width="70%" max-width="50%" alt="Charles" />
+</p>
+
 Before starting with this post, we should ask ourselves what is **Charles**.
 
 "Charles is an HTTP proxy / HTTP monitor / Reverse Proxy that enables a developer to view all of the HTTP and SSL / HTTPS traffic between their machine and the Internet. This includes requests, responses and the HTTP headers (which contain the cookies and caching information)." <a href="https://www.charlesproxy.com" target="_blank">Charles</a>
