@@ -1,15 +1,19 @@
 ---
-date: 2020-03-27 4:39 PM
+date: 2020-03-27 4:39
 title: Let's setup Charles in iOS simulator with Xcode
 description: With Charles with can debug the network requests in our apps so we can test in a simple way our network layer.
 tags: Swift, Debugging, English
 ---
 
+<link href="/MyTheme/MarkDown.css" rel="stylesheet"></link>
+
 # Let's setup Charles in iOS simulator with Xcode
 
 ### Before starting with this post, we should ask ourselves what is **Charles**.
 
-"Charles is an HTTP proxy / HTTP monitor / Reverse Proxy that enables a developer to view all of the HTTP and SSL / HTTPS traffic between their machine and the Internet. This includes requests, responses and the HTTP headers (which contain the cookies and caching information)." <a href="https://www.charlesproxy.com" target="_blank">Charles</a>
+<br />
+
+> "Charles is an HTTP proxy / HTTP monitor / Reverse Proxy that enables a developer to view all of the HTTP and SSL / HTTPS traffic between their machine and the Internet. This includes requests, responses and the HTTP headers (which contain the cookies and caching information)." <a href="https://www.charlesproxy.com" target="_blank">Charles</a>
 
 <br />
 

@@ -1,0 +1,15 @@
+/* @group Block Quotes */
+
+blockquote {
+    position: relative;
+    background-color: #000000;
+    padding: 10px 10px 10px 15px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-left: 4px solid #ff644e
+}
+blockquote p {
+  display: inline;
+}
+
+/* @end */
