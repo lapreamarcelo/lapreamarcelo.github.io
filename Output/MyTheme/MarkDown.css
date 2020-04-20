@@ -1,13 +1,31 @@
 /* @group Block Quotes */
 
+/*blockquote {*/
+/*    position: relative;*/
+/*    background-color: #000000;*/
+/*    padding: 10px 10px 10px 15px;*/
+/*    border-top-right-radius: 7px;*/
+/*    border-bottom-right-radius: 7px;*/
+/*    border-left: 4px solid #588da8*/
+/*}*/
+
 blockquote {
-    position: relative;
-    background-color: #000000;
-    padding: 10px 10px 10px 15px;
-    border-top-right-radius: 7px;
-    border-bottom-right-radius: 7px;
-    border-left: 4px solid #ff644e
+  background: #000000;
+  border-left: 10px solid #588da8;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
 }
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
 blockquote p {
   display: inline;
 }
