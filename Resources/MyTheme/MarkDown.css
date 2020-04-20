@@ -1,19 +1,12 @@
 /* @group Block Quotes */
 
-/*blockquote {*/
-/*    position: relative;*/
-/*    background-color: #000000;*/
-/*    padding: 10px 10px 10px 15px;*/
-/*    border-top-right-radius: 7px;*/
-/*    border-bottom-right-radius: 7px;*/
-/*    border-left: 4px solid #588da8*/
-/*}*/
-
 blockquote {
   background: #000000;
   border-left: 10px solid #588da8;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
   margin: 1.5em 10px;
-  padding: 0.5em 10px;
+  padding: 10px 10px 10px 15px;
   quotes: "\201C""\201D""\2018""\2019";
 }
 
