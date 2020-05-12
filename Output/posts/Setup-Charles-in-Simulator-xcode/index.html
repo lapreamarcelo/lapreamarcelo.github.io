@@ -1,4 +1,64 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="og:site_name" content="Marcelo Laprea"/><link rel="canonical" href="https://lapreamarcelo.github.io/posts/Setup-Charles-in-Simulator-xcode"/><meta name="twitter:url" content="https://lapreamarcelo.github.io/posts/Setup-Charles-in-Simulator-xcode"/><meta name="og:url" content="https://lapreamarcelo.github.io/posts/Setup-Charles-in-Simulator-xcode"/><title>Let's setup Charles in iOS simulator with Xcode | Marcelo Laprea</title><meta name="twitter:title" content="Let's setup Charles in iOS simulator with Xcode | Marcelo Laprea"/><meta name="og:title" content="Let's setup Charles in iOS simulator with Xcode | Marcelo Laprea"/><meta name="description" content="With Charles with can debug the network requests in our apps so we can test in a simple way our network layer."/><meta name="twitter:description" content="With Charles with can debug the network requests in our apps so we can test in a simple way our network layer."/><meta name="og:description" content="With Charles with can debug the network requests in our apps so we can test in a simple way our network layer."/><meta name="twitter:card" content="summary"/><link rel="stylesheet" href="/styles.css" type="text/css"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="shortcut icon" href="/images/favicon.png" type="image/png"/><link rel="alternate" href="/feed.rss" type="application/rss+xml" title="Subscribe to Marcelo Laprea"/></head><body class="item-page"><header><div class="wrapper"><a class="site-name" href="/">Marcelo Laprea</a></div></header><div class="wrapper"><article><div class="content"><link href="/MyTheme/MarkDown.css" rel="stylesheet"></link><h1>Let's setup Charles in iOS simulator with Xcode</h1><h3>Before starting with this post, we should ask ourselves what is <strong>Charles</strong>.</h3><br /><blockquote><p>"Charles is an HTTP proxy / HTTP monitor / Reverse Proxy that enables a developer to view all of the HTTP and SSL / HTTPS traffic between their machine and the Internet. This includes requests, responses and the HTTP headers (which contain the cookies and caching information)." <a href="https://www.charlesproxy.com" target="_blank">Charles</a></p></blockquote><br /><p>Now, for what we can use <strong>Charles</strong>?. Basically to debug network requests in our apps. There are a lot of time that we as a Developer, wants to change some requests to see if it fails, or force the app to receive a wrong value to see how our app reacts to that request. Other time we just want to see what are the responses to figure it out why the app is failing. There are a lot of things we want to test, and sometimes we don't know how. We can do all of this with <strong>Charles</strong>. So let's begin.</p><br /><ul><li><strong>Install <a href="https://www.charlesproxy.com/download/" target="_blank">Charles</a> by clicking in the link.</strong></li></ul><br /><ul><li><strong>Open Charles and click in the Menu: Help &gt; SSL Proxying, and select <em>Install Charles Root Certificate in iOS Simulators</em></strong>.</li></ul><br /><p align="center">
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="og:site_name" content="Marcelo Laprea"/>
+		<link rel="canonical" href="https://lapreamarcelo.github.io/posts/Setup-Charles-in-Simulator-xcode"/>
+		<meta name="twitter:url" content="https://lapreamarcelo.github.io/posts/Setup-Charles-in-Simulator-xcode"/>
+		<meta name="og:url" content="https://lapreamarcelo.github.io/posts/Setup-Charles-in-Simulator-xcode"/>
+		<title>Let's setup Charles in iOS simulator with Xcode | Marcelo Laprea</title>
+		<meta name="twitter:title" content="Let's setup Charles in iOS simulator with Xcode | Marcelo Laprea"/>
+		<meta name="og:title" content="Let's setup Charles in iOS simulator with Xcode | Marcelo Laprea"/>
+		<meta name="description" content="With Charles with can debug the network requests in our apps so we can test in a simple way our network layer."/>
+		<meta name="twitter:description" content="With Charles with can debug the network requests in our apps so we can test in a simple way our network layer."/>
+		<meta name="og:description" content="With Charles with can debug the network requests in our apps so we can test in a simple way our network layer."/>
+		<meta name="twitter:card" content="summary"/>
+		<link rel="stylesheet" href="/styles.css" type="text/css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="shortcut icon" href="/images/favicon.png" type="image/png"/>
+		<link rel="alternate" href="/feed.rss" type="application/rss+xml" title="Subscribe to Marcelo Laprea"/>
+	</head>
+	<body class="item-page">
+		<header>
+			<div class="wrapper">
+				<a class="site-name" href="/">Marcelo Laprea</a>
+			</div>
+		</header>
+		<div class="wrapper">
+			<article>
+				<div class="content"><h1>Let's setup Charles in iOS simulator with Xcode</h1><h3>Before starting with this post, we should ask ourselves what is <strong>Charles</strong>.</h3><br /><pre><code>platform :ios, '<span class="number">11.0</span>'
+use_frameworks!
+inhibit_all_warnings!
+
+deployment_target = '<span class="number">11.0</span>'
+
+workspace '<span class="type">TravelApplication</span>.<span class="property">xcworkspace</span>'
+
+#Versions
+$swinjectVersion =                    '~&gt; <span class="number">2.4</span>'
+$swiftDateVersion =                   '~&gt; <span class="number">5.0</span>'
+&lt;...&gt;
+
+def shared_TravelKit_pods
+    pod '<span class="type">RxSwift</span>',                    $rxSwiftVersion
+    pod '<span class="type">SwiftDate</span>',                  $swiftDateVersion
+end
+
+target '<span class="type">TravelKit</span>' <span class="keyword">do</span>
+    project '<span class="type">TravelKit</span>.<span class="property">xcodeproj</span>'
+    platform :ios, deployment_target
+
+    shared_TravelKit_pods
+
+  target '<span class="type">TravelKitTests</span>' <span class="keyword">do</span>
+    project '<span class="type">TravelKit</span>.<span class="property">xcodeproj</span>'
+    inherit! :search_paths
+
+    shared_testing_pods
+  end
+end
+&lt;...&gt;
+</code></pre><blockquote><p>"Charles is an HTTP proxy / HTTP monitor / Reverse Proxy that enables a developer to view all of the HTTP and SSL / HTTPS traffic between their machine and the Internet. This includes requests, responses and the HTTP headers (which contain the cookies and caching information)." <a href="https://www.charlesproxy.com" target="_blank">Charles</a></p></blockquote><br /><p>Now, for what we can use <strong>Charles</strong>?. Basically to debug network requests in our apps. There are a lot of time that we as a Developer, wants to change some requests to see if it fails, or force the app to receive a wrong value to see how our app reacts to that request. Other time we just want to see what are the responses to figure it out why the app is failing. There are a lot of things we want to test, and sometimes we don't know how. We can do all of this with <strong>Charles</strong>. So let's begin.</p><br /><ul><li><strong>Install <a href="https://www.charlesproxy.com/download/" target="_blank">Charles</a> by clicking in the link.</strong></li></ul><br /><ul><li><strong>Open Charles and click in the Menu: Help &gt; SSL Proxying, and select <em>Install Charles Root Certificate in iOS Simulators</em></strong>.</li></ul><br /><p align="center">
     <img src="/images/charles-tutorial/p1.png" width="70%" max-width="50%" alt="Charles" />
 </p><br /><ul><li><strong>Now make sure you have the option macOS Proxy selected, so we can listen traffic, so click in the Menu: Proxy &gt; macOS Proxy</strong></li></ul><br /><p align="center">
     <img src="/images/charles-tutorial/p2.png" width="50%" max-width="50%" alt="Charles" />
@@ -21,4 +81,29 @@
     <img src="/images/charles-tutorial/p12.png" width="50%" max-width="50%" alt="Charles" />
 </p><br /><p align="center">
     <img src="/images/charles-tutorial/p13.png" width="50%" max-width="50%" alt="Charles" />
-</p><br /><ul><li><strong>Now you can edit the JSON and start testing your network responses</strong></li></ul><br /><h3>That's how you setup Charles for iOS Simulator. For any questions you can contact me at my Twitter, Linkedin or Email.</h3><br /><h2>Thanks again</h2></div><span>Tagged with: </span><ul class="tag-list"><li><a href="/tags/swift">Swift</a></li><li><a href="/tags/debugging">Debugging</a></li><li><a href="/tags/english">English</a></li></ul></article></div><footer><p>Generated using <a href="https://github.com/johnsundell/publish">Publish</a></p><p><a href="/feed.rss">RSS feed</a></p></footer></body></html>
+</p><br /><ul><li><strong>Now you can edit the JSON and start testing your network responses</strong></li></ul><br /><h3>That's how you setup Charles for iOS Simulator. For any questions you can contact me at my Twitter, Linkedin or Email.</h3><br /><h2>Thanks again</h2></div>
+				<span>Tagged with: </span>
+				<ul class="tag-list">
+					<li>
+						<a href="/tags/swift">Swift</a>
+					</li>
+					<li>
+						<a href="/tags/debugging">Debugging</a>
+					</li>
+					<li>
+						<a href="/tags/english">English</a>
+					</li>
+				</ul>
+			</article>
+		</div>
+		<footer>
+			<p>Generated using 
+				<a href="https://github.com/johnsundell/publish">Publish</a>
+			</p>
+			<p>
+				<a href="https://twitter.com/marcelolaprea" target="_blank">Twitter</a> | 
+				<a href="https://github.com/lapreamarcelo" target="_blank">GitHub</a>
+			</p>
+		</footer>
+	</body>
+</html>

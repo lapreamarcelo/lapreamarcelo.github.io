@@ -5,13 +5,46 @@ description: With Charles with can debug the network requests in our apps so we 
 tags: Swift, Debugging, English
 ---
 
-<link href="/MyTheme/MarkDown.css" rel="stylesheet"></link>
-
 # Let's setup Charles in iOS simulator with Xcode
 
 ### Before starting with this post, we should ask ourselves what is **Charles**.
 
 <br />
+
+```swift
+platform :ios, '11.0'
+use_frameworks!
+inhibit_all_warnings!
+
+deployment_target = '11.0'
+
+workspace 'TravelApplication.xcworkspace'
+
+#Versions
+$swinjectVersion =                    '~> 2.4'
+$swiftDateVersion =                   '~> 5.0'
+<...>
+
+def shared_TravelKit_pods
+    pod 'RxSwift',                    $rxSwiftVersion
+    pod 'SwiftDate',                  $swiftDateVersion
+end
+
+target 'TravelKit' do
+    project 'TravelKit.xcodeproj'
+    platform :ios, deployment_target
+
+    shared_TravelKit_pods
+
+  target 'TravelKitTests' do
+    project 'TravelKit.xcodeproj'
+    inherit! :search_paths
+
+    shared_testing_pods
+  end
+end
+<...>
+```
 
 > "Charles is an HTTP proxy / HTTP monitor / Reverse Proxy that enables a developer to view all of the HTTP and SSL / HTTPS traffic between their machine and the Internet. This includes requests, responses and the HTTP headers (which contain the cookies and caching information)." <a href="https://www.charlesproxy.com" target="_blank">Charles</a>
 

@@ -4,13 +4,13 @@ title: Configuremos Charles en el simulador de iOS con Xcode
 description: Con Charles podremos depurar solicitudes de red en nuestras apps y poder testear de una forma rápida y sencilla nuestra capa de red. 
 tags: Swift, Debugging, Spanish
 ---
-<link href="/MyTheme/MarkDown.css" rel="stylesheet"></link>
 
 # Configuremos Charles en el simulador de iOS con Xcode
 
 ### Antes de empezar con este post, tenemos que preguntarnos que es **Charles**.
 
 <br />
+
 
 > "Charles es un proxy HTTP / monitor HTTP / proxy inverso que permite a un desarrollador ver todo el tráfico HTTP y SSL / HTTPS entre su máquina e Internet. Esto incluye solicitudes, respuestas y los encabezados HTTP (que contienen las cookies y la información de almacenamiento en caché)." <a href="https://www.charlesproxy.com" target="_blank">Charles</a>
 

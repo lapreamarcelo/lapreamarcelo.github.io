@@ -3,8 +3,10 @@ import Publish
 import Plot
 import SplashPublishPlugin
 
-// This will generate your website using the built-in Foundation theme:
-try MyBlog().publish(
-    withTheme: .foundation,
-    plugins: [.splash(withClassPrefix: "")]
+try MyBlog().publish(using: [
+    .installPlugin(.splash(withClassPrefix: "")),
+    .addMarkdownFiles(),
+    .copyResources(),
+    .generateHTML(withTheme: .MyTheme, indentation: .tabs(1)),
+    .generateSiteMap()]
 )
